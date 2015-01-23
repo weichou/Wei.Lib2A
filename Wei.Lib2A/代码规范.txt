@@ -1,0 +1,64 @@
+res下文件规范：
+
+一、layout
+
+1、大页面布局
+
+如Activity的布局，以 m (main首字母)开头，如：
+m_xxx.xml
+
+Fragment的大布局，以 m_f_开头，如：
+m_f_xxx.xml
+
+
+2、小布局
+
+如果是ListView的item，以 i 开头，后面跟随主页面的后缀，如：
+主页面：m_abcd.xml
+item应为：i_abcd_xxx.xml
+
+如果是要被include到其他布局中的公共布局，则以 p (part)开头，如：
+p_title.xml
+
+
+二、drawable
+(包括xml和图片)
+xml的后面应该跟_x
+shape的后面应该跟_s
+
+1、背景，以 bg 开头，后面跟随主页面的后缀，如：
+bg_welcome.9.png
+bg_welcome_logo_x.xml
+bg_welcome_s.xml
+
+2、按钮
+
+Button的背景：btn_bg_page_xxx_s.xml
+Button的前景，如drawableTop：btn_fg_dtop_page_xxx_x.xml
+
+ImageView的src和其他图片：img_page_xxx.xml
+
+动画需要的图片：anim_page_xxx.xml
+
+注意：如果多个页面引用同一个图片，也应该写具体的按照某一个页面来写。
+
+
+三、id命名规则
+
+所有id的前缀都应该是当前页面的名字，如：
+页面为：i_abcd_xxx.xml
+则里面的一个Button的id应为：i_abcd_xxx_btn_play.xml
+
+
+
+
+
+
+
+
+
+
+
+
+
+

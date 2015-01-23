@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="300"
+    android:fromYDelta="100%p"
+    android:interpolator="@android:anim/decelerate_interpolator"
+    android:toYDelta="0" />
+ <!--
+		关于以下3个属性的解释：
+			android:fillAfter="true"
+        	android:fillBefore="false"
+        	android:fillEnabled="true"
+        当fillEnabled为false时，fillAfter和fillBefore都应用为true；否则，按照fillAfter和fillBefore的实际值应用。
+        而fillAfter为true表示紧跟着的下一个动画结合该动画结束时的状态，否则回到正常屏幕状态，再开始下一个动画。
+        后一个动画总是在前一个动画结束后的状态上叠加的；
+        fillBefore为true，表示在第一个动画开始时应用该动画的初始状态，即时该动画并没有开始，如果有相同的动画如rotare，则初始值会叠加。
+
+    -->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="lib_wei_c_receiver_string_media_btn">媒体按钮</string>
+    <string name="lib_wei_c_receiver_string_media_unmountable">存储卡无法挂载</string>
+    <string name="lib_wei_c_receiver_string_media_nofs">无效的存储卡，可能未格式化</string>
+    <string name="lib_wei_c_receiver_string_media_mounted">存储卡已挂载</string>
+    <string name="lib_wei_c_receiver_string_media_checking">检查存储卡</string>
+    <string name="lib_wei_c_receiver_string_media_scan_file">请求扫描存储卡</string>
+    <string name="lib_wei_c_receiver_string_media_scan_started">开始扫描存储卡</string>
+    <string name="lib_wei_c_receiver_string_media_scan_finished">存储卡扫描完成</string>
+    <string name="lib_wei_c_receiver_string_media_shared">已连接为USB共享</string>
+    <string name="lib_wei_c_receiver_string_media_eject">将卸载存储卡</string>
+    <string name="lib_wei_c_receiver_string_media_unmounted">存储卡已卸载</string>
+    <string name="lib_wei_c_receiver_string_media_removed">存储卡已拔出</string>
+    <string name="lib_wei_c_receiver_string_media_bad_removal">危险的操作：暴力拔出存储卡！请先卸载再拔出</string>
+
+</resources>

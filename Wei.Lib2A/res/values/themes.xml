@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 这里为什么没有继承自Theme.Dialog.Alert，因为无法继承，会报错，如果继承自Theme.Dialog，
+    	则会产生一个空白的Title区域时显示内容无法居中 -->
+    <style name="Theme.Wei.C.Dialog.Alert" parent="android:Theme.Panel">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>
