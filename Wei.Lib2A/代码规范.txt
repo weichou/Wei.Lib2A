@@ -1,63 +1,92 @@
-res下文件规范：
+res文件及id命名规范
+基本原则：根据以下规则，达到见其名，知其意及用途的效果。
 
 一、layout
 
 1、大页面布局
 
-如Activity的布局，以 m (main首字母)开头，如：
-m_xxx.xml
+Activity的布局，以"[m_]a_"([main + ]activity)开头。如：
+[m_]a_xxx.xml
 
-Fragment的大布局，以 m_f_开头，如：
-m_f_xxx.xml
+Fragment的布局，以"[m_]f_"开头。如：
+[m_]f_xxx.xml
 
+注：[m_]为可选，表示是否为顶级页面。
 
 2、小布局
 
-如果是ListView的item，以 i 开头，后面跟随主页面的后缀，如：
-主页面：m_abcd.xml
-item应为：i_abcd_xxx.xml
+如果是ListView的item，以"i"开头，后面跟随主页面的名称及扩展标识名。如：
+主页面：[m_]f_abcd.xml
+item应为：i_[m_]f_abcd_xxx.xml
 
-如果是要被include到其他布局中的公共布局，则以 p (part)开头，如：
-p_title.xml
-
-
-二、drawable
-(包括xml和图片)
-xml的后面应该跟_x
-shape的后面应该跟_s
-
-1、背景，以 bg 开头，后面跟随主页面的后缀，如：
-bg_welcome.9.png
-bg_welcome_logo_x.xml
-bg_welcome_s.xml
-
-2、按钮
-
-Button的背景：btn_bg_page_xxx_s.xml
-Button的前景，如drawableTop：btn_fg_dtop_page_xxx_x.xml
-
-ImageView的src和其他图片：img_page_xxx.xml
-
-动画需要的图片：anim_page_xxx.xml
-
-注意：如果多个页面引用同一个图片，也应该写具体的按照某一个页面来写。
+如果是要被include到其他布局中的公共布局，则以"l"(layout)开头。如：
+l_title.xml
 
 
-三、id命名规则
+二、id命名规则
+R.id.xxx, 仅存在于layout文件内。
 
-所有id的前缀都应该是当前页面的名字，如：
+id的命名有两个方案可选：
+
+1、极简。如：
+btn、txt、img、l(父布局)等；
+
+注：只要这些id在同一个layout内不重复就行。
+
+2、将页面的layout名称缩写作为前缀，并与扩展标识名之间以"$_"隔开。如：
 页面为：i_abcd_xxx.xml
-则里面的一个Button的id应为：i_abcd_xxx_btn_play.xml
+则里面的一个Button的id应为：iax$_btn_play.xml
+前缀可以保留部分单词以明确含义：i_abcd_x$_btn_play.xml或ia_xxx$_btn_play.xml
+
+注：在Android Studio敲这些id的时候你会发现本规则的便利。
 
 
+三、string
+
+也有两个方案可选：
+
+1、通用字符串，用该字符串英文释义的缩写。如：
+<string name="ok">OK</string>
+<string name="cancel">取消</string>
+
+2、与页面相关的字符串，同id命名规则的第2条规则。如：
+页面为：i_abcd_xxx.xml
+里面的一个Button的id为：iax$_btn_play.xml
+则Button的text对应string为：
+<string name="iax$_btn_play">播放</string>
 
 
+四、color
+
+1、按颜色名称(近似)+"alpha"+透明度。
+名称结尾带p(percent)的表示10进制透明度，
+不带p的表示用16进制透明度。如：
+白色54%透明度：
+<color name="white_alpha_54p">#8affffff</color>
+<color name="white_alpha_8a">#8affffff</color>
+
+2、按颜色名称(近似)+色值首尾字母。如：
+<color name="orange_f5">#fa5d25</color>
+
+3、按颜色名称(近似)+色值首尾字母+深浅度排序。
+xd, depth表示颜色深度，前面的序号x表示由浅到深排序。如：
+<color name="purple_bf_0d">#be7cff</color>
+<color name="purple_9c_1d">#9348dc</color>
+<color name="purple_74_2d">#7d23d4</color>
+名称也可以根据具体用途：
+<color name="dot_loading_0d">#feecde</color>
+<color name="dot_loading_1d">#fbcfab</color>
+<color name="dot_loading_2d">#f8a662</color>
 
 
+五、其它
 
+可遵循类似string规则，对于不能使用"$"字符的地方(如文件名)可改为"_"。
 
-
-
+shape的后面应该跟"_s"；
+selector的后面应该跟"sl"；
+用于selector state的后面应该跟"c"(checked)、"p"(pressed)等；
+其它xml的后面应该跟_x。
 
 
 
