@@ -1,8 +1,8 @@
-#Wei.Lib2A
+# Wei.Lib2A
 ------------------------------------------------------------------------------------------------
 ---
 2016年新增内容：
-###全新基于`@Annotation`的混淆配置库 [Annoguard](http://github.com/WeiChou/Annoguard)
+### 全新基于`@Annotation`的混淆配置库 [Annoguard](http://github.com/WeiChou/Annoguard)
 * 用法详见 [README](http://github.com/WeiChou/Annoguard/blob/master/README.md)
 
 ------------------------------------------------------------------------------------------------
@@ -13,8 +13,8 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
 对于初学者欢迎加 [QQ群:215621863](http://shang.qq.com/wpa/qunwpa?idkey=c39a32d6e9036209430732ff38f23729675bf1fac1d3e9faac09ed2165ae6e17 "Android编程&移动互联") 相互学习探讨！
 
 
-###这个库都有什么？能帮我们做什么？
-####我写代码遵循两个基本原则：
+### 这个库都有什么？能帮我们做什么？
+#### 我写代码遵循两个基本原则：
 * 减少代码量。希望达到的效果是，让使用者尽可能减少代码，能一句话搞定的，绝不两句，能静态方法搞定的，绝不new对象；<br>
 * 增强适应性和稳定性。由于Android平台厂商定制的碎片化和众多版本兼容性问题，本库的开发会着重考虑这些因素，而且基本都是经上线的项目考验过的。
 
@@ -22,9 +22,9 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
 [weichou2010@gmail.com](mailto:weichou2010@gmail.com)、[微信](http://github.com/WeiChou/Wei.Lib2A/blob/master/README.md#联系作者_29) 或 [加群@群主](http://shang.qq.com/wpa/qunwpa?idkey=c39a32d6e9036209430732ff38f23729675bf1fac1d3e9faac09ed2165ae6e17 "Android编程&移动互联")。
 
 
-###基础常用组件介绍如下：
+### 基础常用组件介绍如下：
 
-###1、存储卡工具类 [Storage](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/phone/Storage.java)
+### 1、存储卡工具类 [Storage](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/phone/Storage.java)
 仅通过几个常量即可便捷的取得内置或外置存储卡 [Storage.SdCard](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/phone/Storage.java#L149) 对象。例如：
 
 ```Java
@@ -45,7 +45,7 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
     }
 ```
 
-###2、存储卡自动选择与存储 [FStoreLoc](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/file/FStoreLoc.java)
+### 2、存储卡自动选择与存储 [FStoreLoc](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/file/FStoreLoc.java)
 仅有`存储卡工具`就够了吗？它需要去判断存储卡是否存在、能否创建目录和文件，再决定是否写文件。而`FStoreLoc`可以一步完成：
 
 ```Java
@@ -92,9 +92,9 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
     }
 ```
 
-###3、文件工具 [FileUtils](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/file/FileUtils.java) 和基于版本控制的多进程文件并发读写工具 [FileVersioned](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/file/FileVersioned.java)
+### 3、文件工具 [FileUtils](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/file/FileUtils.java) 和基于版本控制的多进程文件并发读写工具 [FileVersioned](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/file/FileVersioned.java)
 
-###4、增强的SharedPreferences工具：[Keeper](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/persist/Keeper.java)
+### 4、增强的SharedPreferences工具：[Keeper](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/persist/Keeper.java)
 具有多进程读写安全、基于Locale的文件隔离能力等。
 
 基本用法：
@@ -155,11 +155,11 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
                 .xxx();
 ```
 
-###5、网络连接状况判断 [Network](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/phone/Network.java)
+### 5、网络连接状况判断 [Network](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/phone/Network.java)
 
-###6、网络连接状况监听 [NetConnectionReceiver](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/receiver/net)
+### 6、网络连接状况监听 [NetConnectionReceiver](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/receiver/net)
 
-###7、存储卡挂载状况监听 [StorageReceiver](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/receiver/storage)
+### 7、存储卡挂载状况监听 [StorageReceiver](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/receiver/storage)
 示例：
 
 ```Java
@@ -220,7 +220,7 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
     }
 ```
 
-###8、托管广播事件监听器 [EventDelegater](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/framework/EventDelegater.java)
+### 8、托管广播事件监听器 [EventDelegater](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/framework/EventDelegater.java)
 基于但简化了`Broadcast`和`LocalBroadcast`的发送/接收操作，在页面初始化的时候可以调用[AbsActivity/AbsFragment.hostingLocalEventReceiver(...)](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/framework/AbsActivity.java#L233)将事件监听器进行托管，不再需要在`onPause()`、`onResume()`以及`onDestroy()`等事件的时候进行`unregisterXxx()`和`registerXxx()`编码，托管组件将自动完成。受惠于`Broadcast`的松散耦合机制和简化了的发送/接收操作，可将传统的`Callack`模式用本事件模式重构，轻松解决由于某些原因导致的`资源无法释放`和`内存泄露`等问题。示例：
 
 ```Java
@@ -258,7 +258,7 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
     }
 ```
 
-###9、ResourcesId注解 [anno.inject](http://github.com/WeiChou/Wei.Lib2A/tree/master/Wei.Lib2A/src/hobby/wei/c/anno/inject)
+### 9、ResourcesId注解 [anno.inject](http://github.com/WeiChou/Wei.Lib2A/tree/master/Wei.Lib2A/src/hobby/wei/c/anno/inject)
 * 注意`@ViewOnClick`的用法非常灵活。示例：
 
 ```Java
@@ -299,7 +299,7 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
     }
 ```
 
-###10、Json的抽象 [IJson](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/data/abs)
+### 10、Json的抽象 [IJson](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/data/abs)
 示例：
 
 ```Java
@@ -395,7 +395,7 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
     new EditBean().fromJson(jsonString);
 ```
 
-###11、用途广泛的 [ViewHolder](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/framework/ViewHolder.java)
+### 11、用途广泛的 [ViewHolder](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/framework/ViewHolder.java)
 既可用于`ListView`的`Adapter`：
 
 ```Java
@@ -607,7 +607,7 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
 ```
 * 简直神乎其技呀，有木有？！！！
 
-###12、相册选择图片、剪裁，保存图片到相册并广播刷新 [PhotoUtils](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/utils/PhotoUtils.java)
+### 12、相册选择图片、剪裁，保存图片到相册并广播刷新 [PhotoUtils](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/utils/PhotoUtils.java)
 示例：
 
 ```Java
@@ -675,7 +675,7 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
 	}
 ```
 
-###13、简化ListView及同类组件数据更新的套件 [AbsListViewActivity](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/framework/AbsListViewActivity.java)、[AbsListViewFragment](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/framework/AbsListViewFragment.java) 和 [AbsAdapter<T>](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/adapter/AbsAdapter.java)
+### 13、简化ListView及同类组件数据更新的套件 [AbsListViewActivity](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/framework/AbsListViewActivity.java)、[AbsListViewFragment](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/framework/AbsListViewFragment.java) 和 [AbsAdapter<T>](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/adapter/AbsAdapter.java)
 示例：
 
 ```Java
@@ -704,17 +704,17 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
     }
 ```
 
-###14、图像工具 [BitmapUtils](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/utils/BitmapUtils.java)
+### 14、图像工具 [BitmapUtils](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/utils/BitmapUtils.java)
 
-###15、AndroidManifest.xml属性读取工具 [Manifest](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/utils/Manifest.java)
+### 15、AndroidManifest.xml属性读取工具 [Manifest](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/utils/Manifest.java)
 
-###16、对话框、弹窗和进度条 [DialogHelper、Prompt 和 PromptProgress](http://github.com/WeiChou/Wei.Lib2A/tree/master/Wei.Lib2A/src/hobby/wei/c/widget/)
+### 16、对话框、弹窗和进度条 [DialogHelper、Prompt 和 PromptProgress](http://github.com/WeiChou/Wei.Lib2A/tree/master/Wei.Lib2A/src/hobby/wei/c/widget/)
 * UI和动画都可全局定制；
 * `DialogHelper`可弹出在桌面上。
 
-###17、文本超链接点击效果 [LinkMovementMethod、LinkSpan](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/widget/text)
+### 17、文本超链接点击效果 [LinkMovementMethod、LinkSpan](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/widget/text)
 
-###18、具有退出监听能力的 [AbsApp](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/framework/AbsApp.java)
+### 18、具有退出监听能力的 [AbsApp](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/framework/AbsApp.java)
 
 ```Java
 
@@ -734,7 +734,7 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
     }
 ```
 
-###19、非对称密钥对生成工具 [RsaUtils](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/utils/RsaUtils.java)
+### 19、非对称密钥对生成工具 [RsaUtils](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/utils/RsaUtils.java)
 * 可生成iOS项目能识别的公钥密钥文件(iOS要求比较苛刻，而java的库对密钥文件的识别能力较强)。
 
 ###20、时间工具 [TimeUtils](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/utils/TimeUtils.java)
@@ -743,19 +743,19 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
 * 可生成无时区的时间长度表示，并定制单位，如：3天前，1周前，2年6个月前等；
 * 可根据系统时间返回凌晨、上午、中午、下午、晚上、晚休等信息。
 
-###21、Log的简化版[ L ](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/L.java)
+### 21、Log的简化版[ L ](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/L.java)
 * 可在release打包混淆时，将低级别日志自动删除，同时优化掉作为参数的字符串常量(对参数有规范化要求，见代码文档：[@Burden](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/anno/proguard/Burden.java) 或 [proguard.README](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/anno/proguard/README.md))。
 
-###22、全局异常拦截器 [CrashHandler](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/utils/CrashHandler.java)
+### 22、全局异常拦截器 [CrashHandler](http://github.com/WeiChou/Wei.Lib2A/blob/master/Wei.Lib2A/src/hobby/wei/c/utils/CrashHandler.java)
 * 可dump运行时内存到存储卡(.hprof文件)用于内存分析；
 * 可拦截某线程的某异常或所有异常；
 * 可拦截所有线程的某异常或所有异常；
 * 拦截后的处理方式应该根据业务需要自定义处理，默认是作闪退处理。
 
-###23、全新基于`@Annotation`的混淆配置库 [Annoguard](http://github.com/WeiChou/Annoguard)
+### 23、全新基于`@Annotation`的混淆配置库 [Annoguard](http://github.com/WeiChou/Annoguard)
 * 用法详见 [README](http://github.com/WeiChou/Annoguard/blob/master/README.md)
 
-####联系作者
+#### 联系作者
 
 ![微信](weichat_qr_code.jpg)
 ![支付宝](zhifubao_qr_code.jpg)
