@@ -2,8 +2,8 @@
 ------------------------------------------------------------------------------------------------
 ---
 2016年新增内容：
-### 全新基于`@Annotation`的混淆配置库 [Annoguard](http://github.com/WeiChou/Annoguard)
-* 用法详见 [README](http://github.com/WeiChou/Annoguard/blob/master/README.md)
+### 全新基于`@Annotation`的混淆配置库
+* 已独立迁移至github并上传jcenter: [Annoguard](http://github.com/WeiChou/Annoguard)
 
 ------------------------------------------------------------------------------------------------
 ---
@@ -752,8 +752,8 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
 * 可拦截所有线程的某异常或所有异常；
 * 拦截后的处理方式应该根据业务需要自定义处理，默认是作闪退处理。
 
-### 23、全新基于`@Annotation`的混淆配置库 [Annoguard](http://github.com/WeiChou/Annoguard)
-* 用法详见 [README](http://github.com/WeiChou/Annoguard/blob/master/README.md)
+### 23、全新基于`@Annotation`的混淆配置库
+* 已独立迁移至github并上传jcenter: [Annoguard](http://github.com/WeiChou/Annoguard)
 
 #### 联系作者
 
