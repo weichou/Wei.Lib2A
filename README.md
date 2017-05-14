@@ -19,7 +19,7 @@ Android快速开发库，Android常用工具集。任务管理、数据加载、
 * 增强适应性和稳定性。由于Android平台厂商定制的碎片化和众多版本兼容性问题，本库的开发会着重考虑这些因素，而且基本都是经上线的项目考验过的。
 
 本库的所有代码都经过本人严格测试，字斟句酌，了如指掌，注释也很清晰。覆盖Android基础开发的方方面面，推荐作为项目的基础框架来使用，以便于各功能的正常便利集成。有任何疑问或建议请联系作者：
-[weichou2010@gmail.com](mailto:weichou2010@gmail.com)、[微信](http://github.com/WeiChou/Wei.Lib2A/blob/master/README.md#联系作者_29) 或 [加群@群主](http://shang.qq.com/wpa/qunwpa?idkey=c39a32d6e9036209430732ff38f23729675bf1fac1d3e9faac09ed2165ae6e17 "Android编程&移动互联")。
+[weichou2010@gmail.com](mailto:weichou2010@gmail.com)、[微信](http://github.com/WeiChou/Wei.Lib2A/#联系作者) 或 [加群@群主](http://shang.qq.com/wpa/qunwpa?idkey=c39a32d6e9036209430732ff38f23729675bf1fac1d3e9faac09ed2165ae6e17 "Android编程&移动互联")。
 
 
 ### 基础常用组件介绍如下：
