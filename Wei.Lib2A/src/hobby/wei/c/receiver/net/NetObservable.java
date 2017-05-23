@@ -17,35 +17,34 @@
 package hobby.wei.c.receiver.net;
 
 import android.content.Context;
-import android.content.Intent;
 
 import hobby.wei.c.phone.Network;
 import hobby.wei.c.phone.Network.State;
 import hobby.wei.c.phone.Network.Type;
-import hobby.wei.c.receiver.CntObservable;
+import hobby.wei.c.receiver.AbsRcvrObservable;
 import hobby.wei.c.receiver.net.NetObservable.Data;
 
 /**
  * @author 周伟 Wei Chou(weichou2010@gmail.com)
  */
-public class NetObservable extends CntObservable<NetObserver, Data> {
-	static class Data {
-		Type type;
-		State state;
+public class NetObservable extends AbsRcvrObservable<NetObserver, Data> {
+    static class Data {
+        Type type;
+        State state;
 
-		public Data(Context context) {
-			type = Network.getNetworkType(context);
-			state = Network.getNetworkState(context);
-		}
-	}
+        Data(Context context) {
+            type = Network.getNetworkType(context);
+            state = Network.getNetworkState(context);
+        }
+    }
 
-	@Override
-	protected Data onParserData(Context context, Intent intent) {
-		return new Data(context);
-	}
+    @Override
+    protected Data onParseData(Tuple tuple) {
+        return new Data(tuple.context);
+    }
 
-	@Override
-	protected void onChange(NetObserver observer, Data data) {
-		observer.onChanged(data.type, data.state);
-	}
+    @Override
+    protected void onNotifyChange(NetObserver observer, Data data) {
+        observer.onChanged(data.type, data.state);
+    }
 }

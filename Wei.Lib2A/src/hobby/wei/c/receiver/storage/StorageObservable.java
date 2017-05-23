@@ -21,36 +21,36 @@ import android.content.Intent;
 
 import hobby.wei.c.phone.Storage;
 import hobby.wei.c.phone.Storage.SdCard;
-import hobby.wei.c.receiver.CntObservable;
+import hobby.wei.c.receiver.AbsRcvrObservable;
 import hobby.wei.c.receiver.storage.StorageObservable.Data;
 
 /**
  * @author 周伟 Wei Chou(weichou2010@gmail.com)
  */
-public class StorageObservable extends CntObservable<StorageObserver, Data> {
-	static class Data {
-		private Context context;
-		private Intent intent;
-		private String action;
-		private String path;
-		private SdCard sdcard;
+public class StorageObservable extends AbsRcvrObservable<StorageObserver, Data> {
+    static class Data {
+        private Context context;
+        private Intent intent;
+        private String action;
+        private String path;
+        private SdCard sdcard;
 
-		public Data(Context context, Intent intent) {
-			this.context = context;
-			this.intent = intent;
-			action = intent.getAction();
-			path = intent.getData() != null ? intent.getData().getPath() : null;
-			sdcard = Storage.getSdCardByFilePath(path);
-		}
-	}
+        public Data(Context context, Intent intent) {
+            this.context = context;
+            this.intent = intent;
+            action = intent.getAction();
+            path = intent.getData() != null ? intent.getData().getPath() : null;
+            sdcard = Storage.getSdCardByFilePath(path);
+        }
+    }
 
-	@Override
-	protected Data onParserData(Context context, Intent intent) {
-		return new Data(context, intent);
-	}
+    @Override
+    protected Data onParseData(Tuple tuple) {
+        return new Data(tuple.context, tuple.intent);
+    }
 
-	@Override
-	protected void onChange(StorageObserver observer, Data data) {
-		observer.onChanged(data.context, data.intent, data.action, data.path, data.sdcard);
-	}
+    @Override
+    protected void onNotifyChange(StorageObserver observer, Data data) {
+        observer.onChanged(data.context, data.intent, data.action, data.path, data.sdcard);
+    }
 }

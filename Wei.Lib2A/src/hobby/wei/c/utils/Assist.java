@@ -19,6 +19,8 @@ package hobby.wei.c.utils;
 import java.lang.ref.WeakReference;
 import java.util.Collection;
 
+import hobby.wei.c.anno.proguard.Burden;
+
 import static android.text.TextUtils.isEmpty;
 import static hobby.wei.c.utils.ArrayUtils.isEmpty;
 
@@ -41,24 +43,31 @@ public class Assist {
         return Math.max(min, Math.min(value, max));
     }
 
+    @Burden
     public static void assertx(boolean b) {
-        assertx(b, null, false);
+        assertf(b, null, false);
     }
 
     public static void assertf(boolean b) {
-        assertx(b, null, true);
+        assertf(b, null, true);
     }
 
+    @Burden
     public static void assertx(boolean b, String msg) {
-        assertx(b, msg, false);
+        assertf(b, msg, false);
     }
 
     public static void assertf(boolean b, String msg) {
-        assertx(b, msg, true);
+        assertf(b, msg, true);
     }
 
-    public static void assertx(boolean b, String msg, boolean force) {
+    private static void assertf(boolean b, String msg, boolean force) {
         if ((force || DEBUG) && !b) throw new AssertionError(msg);
+    }
+
+    public static <T> T requireNonNull(T o) {
+        assertf(o != null);
+        return o;
     }
 
     public static <T> T requireEquals(T value, Object o) {
