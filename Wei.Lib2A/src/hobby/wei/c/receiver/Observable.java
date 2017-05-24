@@ -42,7 +42,8 @@ public abstract class Observable<O extends Observer, PARSE, DATA> {
         return mObservers.size();
     }
 
-    void notifyChanged(PARSE parse) {
+    public void notifyChanged(PARSE parse) {
+        if (countObservers() <= 0) return;
         final DATA data = onParseData(parse);
         for (O obs : mObservers) {
             onNotifyChange(obs, data);
