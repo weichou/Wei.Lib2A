@@ -76,7 +76,7 @@ public class Injector {
         }
     }
 
-    public static void inject(ViewCreatable injectee, ViewGroup parent, Class<?> stopSearch) {
+    public static void inject(ViewSettable injectee, ViewGroup parent, Class<?> stopSearch) {
         try {
             injectAnnos(injectee, null, parent, stopSearch);
         } catch (Exception e) {
@@ -142,7 +142,7 @@ public class Injector {
      * @param injectee   被注入的对象。
      * @param container  layoutId可被解析的容器，同时被用于findViewById(); 当injectee为ViewGroup的时候可为null.
      * @param parent     仅用于{@link LayoutInflater#inflate(int, ViewGroup, boolean)}.
-     *                   此时injectee必须实现{@link ViewCreatable}接口。
+     *                   此时injectee必须实现{@link ViewSettable}接口。
      * @param stopSearch 在哪一级父类停止搜索并解析注解。
      * @throws Exception
      */
@@ -175,7 +175,7 @@ public class Injector {
                     final int layoutId = layoutID(context, injectee.getClass());
                     if (layoutId > 0) View.inflate(context, layoutId, viewGroup);
                     container = viewGroup;
-                } else if (injectee instanceof ViewCreatable) {
+                } else if (injectee instanceof ViewSettable) {
                     if (parent == null) {
                         throw new IllegalArgumentException("当前参数组合下，parent不能为null");
                     }
@@ -183,7 +183,7 @@ public class Injector {
                     final int layoutId = layoutID(context, injectee.getClass());
                     if (layoutId > 0) {
                         final View view = LayoutInflater.from(context).inflate(layoutId, parent, false);
-                        ((ViewCreatable) injectee).setCreatedView(view);
+                        ((ViewSettable) injectee).onInjectView(view);
                         container = view;
                     } else {
                         throw new IllegalArgumentException("当前参数组合下，需要layoutId标注");
@@ -422,7 +422,7 @@ public class Injector {
         }
     }
 
-    public interface ViewCreatable {
-        void setCreatedView(View view);
+    public interface ViewSettable {
+        void onInjectView(View view);
     }
 }
